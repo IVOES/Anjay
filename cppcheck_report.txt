@@ -1,0 +1,1784 @@
+demo/demo.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+demo/objects.h:129:1: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+AVS_LIST(anjay_iid_t)
+^
+demo/demo_args.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+demo/demo_cmds.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+demo/demo_time.c:36:0: information: Skipping configuration 'CLOCK_MONOTONIC' since the value of 'CLOCK_MONOTONIC' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    if (clock_gettime(CLOCK_MONOTONIC, &system_value))
+^
+deps/avs_coap/src/async/avs_coap_async_client.c:217:36: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+    LOG(TRACE, _("exchange ") "%s" _(": ") "%s",
+                                   ^
+deps/avs_coap/src/async/avs_coap_async_server.c:652:18: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+            "%s" _(" is not a valid response code, sending ") "%s" _(
+                 ^
+deps/avs_coap/src/async/avs_coap_exchange.c:61:43: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+        _("write_payload(offset = ") "%u" _(", size ") "%u" _(") = ") "%d" _(
+                                          ^
+deps/avs_coap/src/avs_coap_code_utils.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+deps/avs_coap/src/avs_coap_common_utils.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+deps/avs_coap/src/avs_coap_ctx.h:217:15: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+static inline AVS_LIST(struct avs_coap_exchange)
+              ^
+deps/avs_coap/src/avs_coap_ctx.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+deps/avs_coap/src/avs_coap_observe.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+deps/avs_coap/src/options/avs_coap_option.c:283:42: warning: Either the condition 'opt_data' is redundant or there is pointer arithmetic with NULL pointer. [nullPointerArithmeticRedundantCheck]
+    const void *b_end = (const char *) b + b_size;
+                                         ^
+deps/avs_coap/src/options/avs_coap_option.c:318:13: note: Assuming that condition 'opt_data' is not redundant
+            opt_data ? opt_data : "",
+            ^
+deps/avs_coap/src/options/avs_coap_option.c:314:66: note: Calling function 'memory_regions_overlap', 3rd argument 'opt_data' value is 0
+    assert(!memory_regions_overlap(buffer, header_bytes_written, opt_data,
+                                                                 ^
+deps/avs_coap/src/options/avs_coap_option.c:283:42: note: Null pointer addition
+    const void *b_end = (const char *) b + b_size;
+                                         ^
+deps/avs_coap/src/options/avs_coap_options.c:119:48: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+        LOG(DEBUG, _("unexpected size (") "%s" _(") > capacity (") "%s" _(")"),
+                                               ^
+deps/avs_coap/src/streaming/avs_coap_streaming_client.c:76:46: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+    LOG(DEBUG, _("coap_stream state: ") "%s" _(" -> ") "%s",
+                                             ^
+deps/avs_coap/src/tcp/avs_coap_tcp_ctx.c:158:38: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+        _("handling incoming ") "%s" _(", token: ") "%s" _(
+                                     ^
+deps/avs_coap/src/tcp/avs_coap_tcp_pending_requests.c:50:32: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+is_list_ordered_by_expire_time(AVS_LIST(avs_coap_tcp_pending_request_t) list) {
+                               ^
+deps/avs_coap/src/tcp/avs_coap_tcp_signaling.c:87:42: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+              "Max-Message-Size: ") "%u" _(", Block-Wise-Transfer "
+                                         ^
+deps/avs_coap/src/udp/avs_coap_udp_ctx.c:227:55: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+            LOG(DEBUG, _("socket MTU changed: ") "%u" _(" -> ") "%d",
+                                                      ^
+deps/avs_coap/src/udp/avs_coap_udp_msg.c:61:51: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+                _("Reset message must use ") "%s" _(" CoAP code (got ") "%s" _(
+                                                  ^
+deps/avs_coap/src/udp/avs_coap_udp_msg_cache.c:118:66: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+            _("endpoint address or port too long: addr = ") "%s" _(
+                                                                 ^
+deps/avs_coap/tests/fuzz/coap_async_api_udp.c:141:27: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+            memcpy(buffer + token_offset + last_toklen, buffer + options_offset,
+                          ^
+deps/avs_coap/tests/fuzz/coap_async_api_udp.c:141:42: portability: 'buffer+token_offset' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+            memcpy(buffer + token_offset + last_toklen, buffer + options_offset,
+                                         ^
+deps/avs_coap/tests/fuzz/coap_async_api_udp.c:144:27: portability: 'buffer' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+            memcpy(buffer + token_offset,
+                          ^
+deps/avs_coap/tests/fuzz/coap_async_api_udp.c:296:21: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    avs_error_t err = AVS_OK;
+                    ^
+deps/avs_coap/tests/options/option.c:33:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0xD0;
+              ^
+deps/avs_coap/tests/options/option.c:30:15: note: buffer[0] is assigned
+    buffer[0] = 0xC0;
+              ^
+deps/avs_coap/tests/options/option.c:33:15: note: buffer[0] is overwritten
+    buffer[0] = 0xD0;
+              ^
+deps/avs_coap/tests/options/option.c:36:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0xE0;
+              ^
+deps/avs_coap/tests/options/option.c:33:15: note: buffer[0] is assigned
+    buffer[0] = 0xD0;
+              ^
+deps/avs_coap/tests/options/option.c:36:15: note: buffer[0] is overwritten
+    buffer[0] = 0xE0;
+              ^
+deps/avs_coap/tests/options/option.c:39:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0x01;
+              ^
+deps/avs_coap/tests/options/option.c:36:15: note: buffer[0] is assigned
+    buffer[0] = 0xE0;
+              ^
+deps/avs_coap/tests/options/option.c:39:15: note: buffer[0] is overwritten
+    buffer[0] = 0x01;
+              ^
+deps/avs_coap/tests/options/option.c:42:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0x0C;
+              ^
+deps/avs_coap/tests/options/option.c:39:15: note: buffer[0] is assigned
+    buffer[0] = 0x01;
+              ^
+deps/avs_coap/tests/options/option.c:42:15: note: buffer[0] is overwritten
+    buffer[0] = 0x0C;
+              ^
+deps/avs_coap/tests/options/option.c:45:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0x0D;
+              ^
+deps/avs_coap/tests/options/option.c:42:15: note: buffer[0] is assigned
+    buffer[0] = 0x0C;
+              ^
+deps/avs_coap/tests/options/option.c:45:15: note: buffer[0] is overwritten
+    buffer[0] = 0x0D;
+              ^
+deps/avs_coap/tests/options/option.c:48:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0x0E;
+              ^
+deps/avs_coap/tests/options/option.c:45:15: note: buffer[0] is assigned
+    buffer[0] = 0x0D;
+              ^
+deps/avs_coap/tests/options/option.c:48:15: note: buffer[0] is overwritten
+    buffer[0] = 0x0E;
+              ^
+deps/avs_coap/tests/options/option.c:51:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0x11;
+              ^
+deps/avs_coap/tests/options/option.c:48:15: note: buffer[0] is assigned
+    buffer[0] = 0x0E;
+              ^
+deps/avs_coap/tests/options/option.c:51:15: note: buffer[0] is overwritten
+    buffer[0] = 0x11;
+              ^
+deps/avs_coap/tests/options/option.c:54:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0xCC;
+              ^
+deps/avs_coap/tests/options/option.c:51:15: note: buffer[0] is assigned
+    buffer[0] = 0x11;
+              ^
+deps/avs_coap/tests/options/option.c:54:15: note: buffer[0] is overwritten
+    buffer[0] = 0xCC;
+              ^
+deps/avs_coap/tests/options/option.c:57:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0xDD;
+              ^
+deps/avs_coap/tests/options/option.c:54:15: note: buffer[0] is assigned
+    buffer[0] = 0xCC;
+              ^
+deps/avs_coap/tests/options/option.c:57:15: note: buffer[0] is overwritten
+    buffer[0] = 0xDD;
+              ^
+deps/avs_coap/tests/options/option.c:60:15: style: Variable 'buffer[0]' is reassigned a value before the old one has been used. [redundantAssignment]
+    buffer[0] = 0xEE;
+              ^
+deps/avs_coap/tests/options/option.c:57:15: note: buffer[0] is assigned
+    buffer[0] = 0xDD;
+              ^
+deps/avs_coap/tests/options/option.c:60:15: note: buffer[0] is overwritten
+    buffer[0] = 0xEE;
+              ^
+deps/avs_coap/tests/options/option.c:60:15: style: Variable 'buffer[0]' is assigned a value that is never used. [unreadVariable]
+    buffer[0] = 0xEE;
+              ^
+deps/avs_coap/tests/options/options.c:476:22: style: Variable 'expected_opt_ptr' is assigned a value that is never used. [unreadVariable]
+    expected_opt_ptr += 1 + 2 + 13 + 256;
+                     ^
+deps/avs_coap/tests/tcp/env.h:131:0: error: failed to expand 'COAP_MSG', it is invalid to use a preprocessor directive as macro parameter [preprocessorErrorDirective]
+#ifdef WITH_AVS_COAP_BLOCK
+^
+deps/avs_coap/tests/udp/streaming_observe.c:433:5: error: There is an unknown macro here somewhere. Configuration is required. If avs_unit_mocksock_input_fail is a macro then please configure it. [unknownMacro]
+    avs_unit_mocksock_input_fail(env.mocksock, avs_errno(AVS_ETIMEDOUT),
+    ^
+deps/avs_coap/tests/udp/streaming_server.c:305:5: error: There is an unknown macro here somewhere. Configuration is required. If avs_unit_mocksock_input_fail is a macro then please configure it. [unknownMacro]
+    avs_unit_mocksock_input_fail(env.mocksock, avs_errno(AVS_ETIMEDOUT),
+    ^
+examples/commercial-features/CF-EST-PKCS11/src/main.c:212:10: style: Variable 'EST_CACERTS_ADDRESS_BUF' is not assigned a value. [unassignedVariable]
+    char EST_CACERTS_ADDRESS_BUF[256];
+         ^
+examples/commercial-features/CF-PSA-management/src/main.c:16:16: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+    int result = 0;
+               ^
+examples/custom-network/bind/src/net_impl.c:319:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/bind/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/bind/src/net_impl.c:319:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/bind/src/net_impl.c:320:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/bind/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/bind/src/net_impl.c:320:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/bind/src/net_impl.c:326:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/bind/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/bind/src/net_impl.c:326:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/bind/src/net_impl.c:327:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/bind/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/bind/src/net_impl.c:327:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/ip-stickiness/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/ip-stickiness/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/ip-stickiness/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/ip-stickiness/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/ip-stickiness/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/ip-stickiness/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/ip-stickiness/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/ip-stickiness/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/ip-stickiness/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/ip-stickiness/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/ip-stickiness/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/ip-stickiness/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/minimal/src/net_impl.c:198:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/minimal/src/net_impl.c:18:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/minimal/src/net_impl.c:198:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/minimal/src/net_impl.c:199:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/minimal/src/net_impl.c:19:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/minimal/src/net_impl.c:199:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/minimal/src/net_impl.c:205:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/minimal/src/net_impl.c:16:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/minimal/src/net_impl.c:205:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/minimal/src/net_impl.c:206:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/minimal/src/net_impl.c:17:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/minimal/src/net_impl.c:206:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/remote-host-port/src/net_impl.c:264:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/remote-host-port/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/remote-host-port/src/net_impl.c:264:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/remote-host-port/src/net_impl.c:265:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/remote-host-port/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/remote-host-port/src/net_impl.c:265:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/remote-host-port/src/net_impl.c:271:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/remote-host-port/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/remote-host-port/src/net_impl.c:271:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/remote-host-port/src/net_impl.c:272:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/remote-host-port/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/remote-host-port/src/net_impl.c:272:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:354:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:354:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:355:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:355:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:361:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:361:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:362:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/shutdown-remote-hostname/src/net_impl.c:362:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/stats/src/net_impl.c:366:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/stats/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/stats/src/net_impl.c:366:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/stats/src/net_impl.c:367:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/stats/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/stats/src/net_impl.c:367:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/stats/src/net_impl.c:373:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/stats/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-network/stats/src/net_impl.c:373:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-network/stats/src/net_impl.c:374:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-network/stats/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-network/stats/src/net_impl.c:374:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/certificates-advanced-fake-dane/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:710:60: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:17:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket,
+                                                           ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:710:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:711:53: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'. [funcArgNamesDifferent]
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:18:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *socket_configuration);
+                                                    ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:711:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:774:59: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:15:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:774:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:775:52: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:16:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:775:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/certificates-advanced/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:753:60: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:17:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket,
+                                                           ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:753:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:754:53: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'. [funcArgNamesDifferent]
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:18:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *socket_configuration);
+                                                    ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:754:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:817:59: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:15:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:817:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:818:52: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:16:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/certificates-advanced/src/tls_impl.c:818:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-basic/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-basic/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/certificates-basic/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-basic/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-basic/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/certificates-basic/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-basic/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-basic/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/certificates-basic/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-basic/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-basic/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/certificates-basic/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:643:60: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:17:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket,
+                                                           ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:643:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:644:53: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'. [funcArgNamesDifferent]
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:18:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *socket_configuration);
+                                                    ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:644:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:707:59: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:15:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:707:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:708:52: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:16:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/certificates-basic/src/tls_impl.c:708:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/config-features/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/config-features/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/config-features/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/config-features/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/config-features/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/config-features/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/config-features/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/config-features/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/config-features/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/config-features/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/config-features/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/config-features/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/config-features/src/tls_impl.c:447:60: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/config-features/src/tls_impl.c:16:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket,
+                                                           ^
+examples/custom-tls/config-features/src/tls_impl.c:447:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/config-features/src/tls_impl.c:448:53: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'. [funcArgNamesDifferent]
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/config-features/src/tls_impl.c:17:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *socket_configuration);
+                                                    ^
+examples/custom-tls/config-features/src/tls_impl.c:448:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/config-features/src/tls_impl.c:508:59: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/config-features/src/tls_impl.c:14:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/config-features/src/tls_impl.c:508:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/config-features/src/tls_impl.c:509:52: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/config-features/src/tls_impl.c:15:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/config-features/src/tls_impl.c:509:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/minimal/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/minimal/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/minimal/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/minimal/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/minimal/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/minimal/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/minimal/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/minimal/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/minimal/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/minimal/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/minimal/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/minimal/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/minimal/src/tls_impl.c:312:60: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/minimal/src/tls_impl.c:16:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket,
+                                                           ^
+examples/custom-tls/minimal/src/tls_impl.c:312:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/minimal/src/tls_impl.c:313:53: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'. [funcArgNamesDifferent]
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/minimal/src/tls_impl.c:17:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *socket_configuration);
+                                                    ^
+examples/custom-tls/minimal/src/tls_impl.c:313:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/minimal/src/tls_impl.c:351:59: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/minimal/src/tls_impl.c:14:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/minimal/src/tls_impl.c:351:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/minimal/src/tls_impl.c:352:52: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/minimal/src/tls_impl.c:15:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/minimal/src/tls_impl.c:352:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/resumption-buffer/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:342:60: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:16:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket,
+                                                           ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:342:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:343:53: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'. [funcArgNamesDifferent]
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:17:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *socket_configuration);
+                                                    ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:343:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:392:59: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:14:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:392:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:393:52: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:15:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/resumption-buffer/src/tls_impl.c:393:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-simple/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-simple/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/resumption-simple/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-simple/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-simple/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/resumption-simple/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-simple/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-simple/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/resumption-simple/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-simple/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-simple/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/resumption-simple/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:340:60: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:16:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket,
+                                                           ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:340:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:341:53: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'. [funcArgNamesDifferent]
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:17:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *socket_configuration);
+                                                    ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:341:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration_'.
+                                        const void *configuration_) {
+                                                    ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:383:59: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:14:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:383:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:384:52: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:15:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/resumption-simple/src/tls_impl.c:384:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/stub/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/stub/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/stub/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/stub/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/stub/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/stub/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/stub/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/stub/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/stub/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/stub/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/stub/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/stub/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/stub/src/tls_impl.c:200:60: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/stub/src/tls_impl.c:16:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket,
+                                                           ^
+examples/custom-tls/stub/src/tls_impl.c:200:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/stub/src/tls_impl.c:201:53: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                        const void *configuration) {
+                                                    ^
+examples/custom-tls/stub/src/tls_impl.c:17:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                        const void *socket_configuration);
+                                                    ^
+examples/custom-tls/stub/src/tls_impl.c:201:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                        const void *configuration) {
+                                                    ^
+examples/custom-tls/stub/src/tls_impl.c:205:59: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/stub/src/tls_impl.c:14:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/stub/src/tls_impl.c:205:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/stub/src/tls_impl.c:206:52: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/stub/src/tls_impl.c:15:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/stub/src/tls_impl.c:206:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/tcp-support/src/net_impl.c:394:59: style:inconclusive: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/tcp-support/src/net_impl.c:23:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/tcp-support/src/net_impl.c:394:59: note: Function '_avs_net_create_udp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_udp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/tcp-support/src/net_impl.c:395:52: style:inconclusive: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/tcp-support/src/net_impl.c:24:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/tcp-support/src/net_impl.c:395:52: note: Function '_avs_net_create_udp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/tcp-support/src/net_impl.c:401:59: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/tcp-support/src/net_impl.c:21:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/tcp-support/src/net_impl.c:401:59: note: Function '_avs_net_create_tcp_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_tcp_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/tcp-support/src/net_impl.c:402:52: style:inconclusive: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/tcp-support/src/net_impl.c:22:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/tcp-support/src/net_impl.c:402:52: note: Function '_avs_net_create_tcp_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/tcp-support/src/time_object.c:118:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *ptr;
+                              ^
+examples/custom-tls/tcp-support/src/time_object.c:146:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *it;
+                              ^
+examples/custom-tls/tcp-support/src/tls_impl.c:871:60: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/tcp-support/src/tls_impl.c:17:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket,
+                                                           ^
+examples/custom-tls/tcp-support/src/tls_impl.c:871:60: note: Function '_avs_net_create_dtls_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_dtls_socket(avs_net_socket_t **socket_ptr,
+                                                           ^
+examples/custom-tls/tcp-support/src/tls_impl.c:872:53: style:inconclusive: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                        const void *configuration) {
+                                                    ^
+examples/custom-tls/tcp-support/src/tls_impl.c:18:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                        const void *socket_configuration);
+                                                    ^
+examples/custom-tls/tcp-support/src/tls_impl.c:872:53: note: Function '_avs_net_create_dtls_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                        const void *configuration) {
+                                                    ^
+examples/custom-tls/tcp-support/src/tls_impl.c:878:59: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'. [funcArgNamesDifferent]
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/tcp-support/src/tls_impl.c:15:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket,
+                                                          ^
+examples/custom-tls/tcp-support/src/tls_impl.c:878:59: note: Function '_avs_net_create_ssl_socket' argument 1 names different: declaration 'socket' definition 'socket_ptr'.
+avs_error_t _avs_net_create_ssl_socket(avs_net_socket_t **socket_ptr,
+                                                          ^
+examples/custom-tls/tcp-support/src/tls_impl.c:879:52: style:inconclusive: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'. [funcArgNamesDifferent]
+                                       const void *configuration) {
+                                                   ^
+examples/custom-tls/tcp-support/src/tls_impl.c:16:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *socket_configuration);
+                                                   ^
+examples/custom-tls/tcp-support/src/tls_impl.c:879:52: note: Function '_avs_net_create_ssl_socket' argument 2 names different: declaration 'socket_configuration' definition 'configuration'.
+                                       const void *configuration) {
+                                                   ^
+examples/tutorial/AT-AccessControl/src/test_object.c:86:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(test_instance_t) *insert_ptr;
+                              ^
+examples/tutorial/AT-AccessControl/src/test_object.c:102:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(test_instance_t) *it;
+                              ^
+examples/tutorial/AT-CustomObjects/multi-instance-dynamic/src/test_object.c:86:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(test_instance_t) *insert_ptr;
+                              ^
+examples/tutorial/AT-CustomObjects/multi-instance-dynamic/src/test_object.c:102:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(test_instance_t) *it;
+                              ^
+examples/tutorial/AT-CustomObjects/multi-instance-resources-dynamic/src/test_object.c:313:28: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+                           AVS_LIST(const test_instance_t) instances) {
+                           ^
+examples/tutorial/BC-Notifications/src/time_object.c:118:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *ptr;
+                              ^
+examples/tutorial/BC-Notifications/src/time_object.c:146:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *it;
+                              ^
+examples/tutorial/BC-ObjectImplementation/src/time_object.c:117:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *ptr;
+                              ^
+examples/tutorial/BC-ObjectImplementation/src/time_object.c:145:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *it;
+                              ^
+examples/tutorial/BC-Send/src/time_object.c:120:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *ptr;
+                              ^
+examples/tutorial/BC-Send/src/time_object.c:148:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *it;
+                              ^
+examples/tutorial/BC-ThreadSafety/src/time_object.c:124:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *ptr;
+                              ^
+examples/tutorial/BC-ThreadSafety/src/time_object.c:160:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *it;
+                              ^
+examples/tutorial/firmware-update/basic-implementation/src/time_object.c:118:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *ptr;
+                              ^
+examples/tutorial/firmware-update/basic-implementation/src/time_object.c:146:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *it;
+                              ^
+examples/tutorial/firmware-update/download-resumption/src/firmware_update.c:167:24: style: Condition 'package_etag' is always true [knownConditionTrueFalse]
+        if (!result && package_etag) {
+                       ^
+examples/tutorial/firmware-update/download-resumption/src/firmware_update.c:159:24: note: Assuming that condition 'package_etag' is not redundant
+    if (package_uri && package_etag) {
+                       ^
+examples/tutorial/firmware-update/download-resumption/src/firmware_update.c:167:24: note: Condition 'package_etag' is always true
+        if (!result && package_etag) {
+                       ^
+examples/tutorial/firmware-update/download-resumption/src/time_object.c:118:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *ptr;
+                              ^
+examples/tutorial/firmware-update/download-resumption/src/time_object.c:146:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *it;
+                              ^
+examples/tutorial/firmware-update/secure-downloads/src/time_object.c:118:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *ptr;
+                              ^
+examples/tutorial/firmware-update/secure-downloads/src/time_object.c:146:31: warning:inconclusive: Found suspicious operator '*' [constStatement]
+    AVS_LIST(time_instance_t) *it;
+                              ^
+src/core/anjay_access_utils.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/anjay_utils_private.h:70:32: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+                               AVS_LIST(const anjay_string_t) strings,
+                               ^
+src/core/anjay_bootstrap_core.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 27 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/anjay_core.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 24 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/anjay_dm_core.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 25 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/anjay_event_loop.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/anjay_event_loop.c:18:0: error: No header in #include [preprocessorErrorDirective]
+#        include AVS_COMMONS_POSIX_COMPAT_HEADER
+^
+src/core/anjay_lwm2m_send.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 24 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/anjay_lwm2m_send.c:303:0: information: Skipping configuration 'ANJAY_DEFAULT_SEND_FORMAT;ANJAY_WITH_LWM2M11;ANJAY_WITH_SEND' since the value of 'ANJAY_DEFAULT_SEND_FORMAT' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            ANJAY_DEFAULT_SEND_FORMAT
+^
+src/core/anjay_notify.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/anjay_servers_utils.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/anjay_stats.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/anjay_utils_core.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/attr_storage/anjay_attr_storage.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/attr_storage/anjay_attr_storage_persistence.c:202:32: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+static bool is_attrs_list_sane(AVS_LIST(void) attrs_list,
+                               ^
+src/core/dm/anjay_discover.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/dm/anjay_dm_attributes.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/dm/anjay_dm_create.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/dm/anjay_dm_handlers.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/dm/anjay_dm_read.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/dm/anjay_dm_write.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/dm/anjay_dm_write_attrs.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/dm/anjay_modules.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/dm/anjay_query.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/downloader/anjay_coap.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 24 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/downloader/anjay_downloader.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/downloader/anjay_http.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/io/anjay_batch_builder.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 27 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/io/anjay_dynamic.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/io/anjay_senml_in.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/io/anjay_senml_like_out.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/observe/anjay_observe_core.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 25 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/observe/anjay_observe_core.c:425:8: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+static AVS_LIST(anjay_observe_connection_entry_t)
+       ^
+src/core/servers/anjay_activate.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/servers/anjay_activate.c:525:1: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+AVS_LIST(anjay_server_info_t)
+^
+src/core/servers/anjay_connection_ip.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/servers/anjay_connections.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 26 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/servers/anjay_register.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/servers/anjay_reload.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/servers/anjay_security_generic.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/servers/anjay_server_connections.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/servers/anjay_servers_internal.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/core/servers/anjay_servers_internal.c:138:1: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+AVS_LIST(const anjay_socket_entry_t)
+^
+src/modules/access_control/anjay_mod_access_control.h:87:9: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+        AVS_LIST(access_control_instance_t) instance,
+        ^
+src/modules/access_control/anjay_mod_access_control.c:180:1: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+AVS_LIST(access_control_instance_t)
+^
+src/modules/factory_provisioning/anjay_provisioning.c:77:9: style: Redundant initialization for 'err'. The initialized value is overwritten before it is read. [redundantInitialization]
+    err = factory_provisioning_unlocked(anjay, data_stream);
+        ^
+src/modules/factory_provisioning/anjay_provisioning.c:75:21: note: err is initialized
+    avs_error_t err = avs_errno(AVS_EINVAL);
+                    ^
+src/modules/factory_provisioning/anjay_provisioning.c:77:9: note: err is overwritten
+    err = factory_provisioning_unlocked(anjay, data_stream);
+        ^
+src/modules/fw_update/anjay_fw_update.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/modules/fw_update/anjay_fw_update.c:187:9: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+        fw_log(DEBUG, _("Firmware Update Result change: ") "%d" _(" -> ") "%d",
+        ^
+src/modules/ipso/anjay_ipso_3d_sensor.c:401:51: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+        _anjay_log(ipso, ERROR, _("Object") " %d" _(" has no instance") " %d",
+                                                  ^
+src/modules/ipso/anjay_ipso_basic_sensor.c:444:51: error: There is an unknown macro here somewhere. Configuration is required. If _ is a macro then please configure it. [unknownMacro]
+        _anjay_log(ipso, ERROR, _("Object") " %d" _(" has no instance") " %d",
+                                                  ^
+src/modules/security/anjay_mod_security.c:75:32: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+static anjay_iid_t get_new_iid(AVS_LIST(sec_instance_t) instances) {
+                               ^
+src/modules/security/anjay_mod_security.c:467:8: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+static AVS_LIST(sec_cipher_instance_t)
+       ^
+src/modules/security/anjay_security_utils.h:85:1: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+AVS_LIST(sec_instance_t) _anjay_sec_clone_instances(const sec_repr_t *repr);
+^
+src/modules/security/anjay_security_utils.c:257:1: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+AVS_LIST(sec_instance_t) _anjay_sec_clone_instances(const sec_repr_t *repr) {
+^
+src/modules/server/anjay_mod_server.c:130:32: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+static anjay_iid_t get_new_iid(AVS_LIST(server_instance_t) instances) {
+                               ^
+src/modules/server/anjay_server_utils.h:31:1: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+AVS_LIST(server_instance_t)
+^
+src/modules/server/anjay_server_utils.c:55:1: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+AVS_LIST(server_instance_t)
+^
+tests/core/anjay.c:265:17: style: Variable 'depth' is reassigned a value before the old one has been used. [redundantAssignment]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:260:17: note: depth is assigned
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:265:17: note: depth is overwritten
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:271:17: style: Variable 'depth' is reassigned a value before the old one has been used. [redundantAssignment]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:265:17: note: depth is assigned
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:271:17: note: depth is overwritten
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:277:17: style: Variable 'depth' is reassigned a value before the old one has been used. [redundantAssignment]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:271:17: note: depth is assigned
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:277:17: note: depth is overwritten
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:284:17: style: Variable 'depth' is reassigned a value before the old one has been used. [redundantAssignment]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:277:17: note: depth is assigned
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:284:17: note: depth is overwritten
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:291:17: style: Variable 'depth' is reassigned a value before the old one has been used. [redundantAssignment]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:284:17: note: depth is assigned
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:291:17: note: depth is overwritten
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:298:17: style: Variable 'depth' is reassigned a value before the old one has been used. [redundantAssignment]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:291:17: note: depth is assigned
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:298:17: note: depth is overwritten
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:306:17: style: Variable 'depth' is reassigned a value before the old one has been used. [redundantAssignment]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:298:17: note: depth is assigned
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:306:17: note: depth is overwritten
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:312:17: style: Variable 'depth' is reassigned a value before the old one has been used. [redundantAssignment]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:306:17: note: depth is assigned
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:312:17: note: depth is overwritten
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:228:15: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_OK(PARSE_QUERIES_WRAPPED(
+              ^
+tests/core/anjay.c:239:15: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_OK(PARSE_QUERIES_WRAPPED(
+              ^
+tests/core/anjay.c:252:15: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_OK(PARSE_QUERIES_WRAPPED(
+              ^
+tests/core/anjay.c:260:17: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:265:17: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:271:17: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:277:17: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:284:17: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:291:17: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:298:17: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:306:17: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:312:17: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    ASSERT_FAIL(PARSE_QUERIES_WRAPPED(
+                ^
+tests/core/anjay.c:329:40: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "1", NULL),
+                                       ^
+tests/core/anjay.c:337:45: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "2", "3", NULL),
+                                            ^
+tests/core/anjay.c:345:50: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "4", "5", "6", NULL),
+                                                 ^
+tests/core/anjay.c:353:56: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "7", "8", "9", "10", NULL),
+                                                       ^
+tests/core/anjay.c:362:71: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "65534", "65534", "65534", "65534", NULL),
+                                                                      ^
+tests/core/anjay.c:371:41: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "bs", NULL),
+                                        ^
+tests/core/anjay.c:378:78: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+            header_with_string_opts(&header_storage, AVS_COAP_OPTION_URI_PATH,
+                                                                             ^
+tests/core/anjay.c:387:39: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "", NULL),
+                                      ^
+tests/core/anjay.c:395:44: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "", "1", NULL),
+                                           ^
+tests/core/anjay.c:399:49: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "1", "", "2", NULL),
+                                                ^
+tests/core/anjay.c:406:50: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "7", "8", "9", NULL),
+                                                 ^
+tests/core/anjay.c:412:66: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "100", "10", "11", "12", "13", NULL),
+                                                                 ^
+tests/core/anjay.c:418:72: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "100", "101", "102", "wololo", "13", NULL),
+                                                                       ^
+tests/core/anjay.c:424:59: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "14", "NopeChuckTesta", NULL),
+                                                          ^
+tests/core/anjay.c:430:44: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "65535", NULL),
+                                           ^
+tests/core/anjay.c:436:50: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "15", "65535", NULL),
+                                                 ^
+tests/core/anjay.c:442:56: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "16", "17", "65535", NULL),
+                                                       ^
+tests/core/anjay.c:448:62: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "16", "17", "18", "65535", NULL),
+                                                             ^
+tests/core/anjay.c:454:51: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+                                    "bs", "1", "2", NULL),
+                                                  ^
+tests/core/anjay.c:54:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    TEST_SPLIT_QUERY_STRING("", "", NULL);
+    ^
+tests/core/anjay.c:55:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    TEST_SPLIT_QUERY_STRING("key", "key", NULL);
+    ^
+tests/core/anjay.c:56:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    TEST_SPLIT_QUERY_STRING("key=", "key", "");
+    ^
+tests/core/anjay.c:57:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    TEST_SPLIT_QUERY_STRING("=value", "", "value");
+    ^
+tests/core/anjay.c:58:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    TEST_SPLIT_QUERY_STRING("key=value", "key", "value");
+    ^
+tests/core/attr_storage/attr_storage_test.h:99:26: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+        anjay_iid_t iid, AVS_LIST(as_default_attrs_t) default_attrs, ...) {
+                         ^
+tests/core/coap/utils.h:226:32: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+                               AVS_LIST(const anjay_string_t) values) {
+                               ^
+tests/core/io/dynamic.c:309:74: style: Variable 'env' is assigned a value that is never used. [unreadVariable]
+    dynamic_test_env_t env __attribute__((cleanup(dynamic_test_delete))) =
+                                                                         ^
+tests/core/io/dynamic.c:361:74: style: Variable 'env' is assigned a value that is never used. [unreadVariable]
+    dynamic_test_env_t env __attribute__((cleanup(dynamic_test_delete))) =
+                                                                         ^
+tests/core/io/senml_cbor_encoder.c:30:17: style: struct member 'test_data_t::data' is never used. [unusedStructMember]
+    const char *data;
+                ^
+tests/core/io/senml_cbor_encoder.c:31:12: style: struct member 'test_data_t::size' is never used. [unusedStructMember]
+    size_t size;
+           ^
+tests/core/lwm2m_send.c:484:27: error: syntax error: keyword 'continue' is not allowed in global scope [syntaxError]
+AVS_UNIT_TEST(anjay_send, continue) {
+                          ^
+tests/core/observe/observe.c:1053:26: error: There is an unknown macro here somewhere. Configuration is required. If DM_TEST_CONFIGURATION is a macro then please configure it. [unknownMacro]
+                         DM_TEST_CONFIGURATION(.confirmable_notifications =
+                         ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/context.cpp:21:30: performance: Function parameter 'connection_id' should be passed by const reference. [passedByValue]
+                 std::string connection_id)
+                             ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:49:18: style: The function 'configure' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    virtual void configure(Socket &socket);
+                 ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:30:18: note: Virtual function in base class
+    virtual void configure(Socket &socket);
+                 ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:49:18: note: Function in derived class
+    virtual void configure(Socket &socket);
+                 ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:50:25: style: The function 'name' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    virtual std::string name() const;
+                        ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:31:25: note: Virtual function in base class
+    virtual std::string name() const = 0;
+                        ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:50:25: note: Function in derived class
+    virtual std::string name() const;
+                        ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:77:18: style: The function 'configure' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    virtual void configure(Socket &socket);
+                 ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:30:18: note: Virtual function in base class
+    virtual void configure(Socket &socket);
+                 ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:77:18: note: Function in derived class
+    virtual void configure(Socket &socket);
+                 ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:78:25: style: The function 'name' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    virtual std::string name() const;
+                        ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:31:25: note: Virtual function in base class
+    virtual std::string name() const = 0;
+                        ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/security.hpp:78:25: note: Function in derived class
+    virtual std::string name() const;
+                        ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/pybind11_interop.hpp:24:17: style: Redundant initialization for 'f'. The initialized value is overwritten before it is read. [redundantInitialization]
+    auto result = f(std::forward<Args>(args)...);
+                ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/pybind11_interop.hpp:23:12: note: f is initialized
+    auto f = py_object.attr(name);
+           ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/pybind11_interop.hpp:24:17: note: f is overwritten
+    auto result = f(std::forward<Args>(args)...);
+                ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/pybind11_interop.hpp:24:17: style: Redundant initialization for 'f'. The initialized value is overwritten before it is read. [redundantInitialization]
+    auto result = f(std::forward<Args>(args)...);
+                ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/pybind11_interop.hpp:24:17: note: f is initialized
+    auto result = f(std::forward<Args>(args)...);
+                ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/pybind11_interop.hpp:24:17: note: f is overwritten
+    auto result = f(std::forward<Args>(args)...);
+                ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/pybind11_interop.hpp:24:17: style: Variable 'f' is assigned a value that is never used. [unreadVariable]
+    auto result = f(std::forward<Args>(args)...);
+                ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/socket.cpp:94:9: style: Class 'TimeoutRestorer' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        TimeoutRestorer(Socket *socket)
+        ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/socket.cpp:204:9: style: Class 'HandshakeRaii' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        HandshakeRaii(Socket &self) : self_(self) {
+        ^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/socket.cpp:51:0: information: Skipping configuration 'SOCK_CLOEXEC' since the value of 'SOCK_CLOEXEC' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    result &= ~SOCK_CLOEXEC;
+^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/socket.cpp:48:0: information: Skipping configuration 'SOCK_NONBLOCK' since the value of 'SOCK_NONBLOCK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    result &= ~SOCK_NONBLOCK;
+^
+tests/integration/framework/nsh-lwm2m/pymbedtls/src/socket.cpp:498:0: information: Skipping configuration 'SO_REUSEADDR' since the value of 'SO_REUSEADDR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    call_method<void>(socket, "setsockopt", SOL_SOCKET, SO_REUSEADDR, 1);
+^
+tests/modules/access_control/persistence.c:44:13: error: There is an unknown macro here somewhere. Configuration is required. If AVS_LIST is a macro then please configure it. [unknownMacro]
+lists_equal(AVS_LIST(void) a, AVS_LIST(void) b, comparator_t *equals) {
+            ^
+tests/utils/mock_dm.c:376:9: style: The scope of the variable 'retval' can be reduced. [variableScope]
+    int retval = 0;
+        ^
+tests/utils/mock_dm.c:832:0: style: The function '_anjay_mock_dm_expect_resource_instance_write_attrs' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:180:0: style: The function '_anjay_mock_dm_instance_read_default_attrs' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:176:0: style: The function '_anjay_mock_dm_instance_reset' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:193:0: style: The function '_anjay_mock_dm_instance_write_default_attrs' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:125:0: style: The function '_anjay_mock_dm_object_read_default_attrs' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:136:0: style: The function '_anjay_mock_dm_object_write_default_attrs' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:484:0: style: The function '_anjay_mock_dm_resource_instance_read_attrs' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:503:0: style: The function '_anjay_mock_dm_resource_instance_write_attrs' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:452:0: style: The function '_anjay_mock_dm_resource_read_attrs' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:416:0: style: The function '_anjay_mock_dm_resource_reset' is never used. [unusedFunction]
+
+^
+tests/utils/mock_dm.c:467:0: style: The function '_anjay_mock_dm_resource_write_attrs' is never used. [unusedFunction]
+
+^
+src/core/anjay_raw_buffer.c:22:0: style: The function '_anjay_raw_buffer_clear' is never used. [unusedFunction]
+
+^
+src/core/anjay_raw_buffer.c:29:0: style: The function '_anjay_raw_buffer_clone' is never used. [unusedFunction]
+
+^
+tests/utils/dm.c:98:0: style: The function '_anjay_test_dm_fake_security_list_instances' is never used. [unusedFunction]
+
+^
+tests/utils/dm.c:119:0: style: The function '_anjay_test_dm_fake_security_list_resources' is never used. [unusedFunction]
+
+^
+tests/utils/dm.c:142:0: style: The function '_anjay_test_dm_fake_security_read' is never used. [unusedFunction]
+
+^
+tests/utils/dm.c:74:0: style: The function '_anjay_test_dm_finish' is never used. [unusedFunction]
+
+^
+tests/utils/dm.c:29:0: style: The function '_anjay_test_dm_init' is never used. [unusedFunction]
+
+^
+tests/utils/dm.c:44:0: style: The function '_anjay_test_dm_install_socket' is never used. [unusedFunction]
+
+^
+deps/avs_coap/tests/utils.c:31:0: style: The function '_avs_coap_ctx_generate_token' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/options/avs_coap_option.c:131:0: style: The function '_avs_coap_option_block_has_more' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/options/avs_coap_option.c:120:0: style: The function '_avs_coap_option_block_seq_number' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/options/avs_coap_option.c:142:0: style: The function '_avs_coap_option_block_size' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/options/avs_coap_option.c:346:0: style: The function '_avs_coap_option_block_string' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/options/avs_coap_option.c:208:0: style: The function '_avs_coap_option_is_valid' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/options/avs_coap_option.c:106:0: style: The function '_avs_coap_option_string_value' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/options/avs_coap_option.c:76:0: style: The function '_avs_coap_option_u16_value' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/tcp/avs_coap_tcp_msg.c:67:0: style: The function '_avs_coap_tcp_pack_options' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/tcp/avs_coap_tcp_msg.c:132:0: style: The function '_avs_coap_tcp_pack_payload' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/tcp/avs_coap_tcp_msg.c:27:0: style: The function '_avs_coap_tcp_serialize_msg' is never used. [unusedFunction]
+
+^
+deps/avs_coap/tests/socket.c:19:0: style: The function '_avs_mocksock_create' is never used. [unusedFunction]
+
+^
+examples/custom-network/bind/src/net_impl.c:30:0: style: The function '_avs_net_cleanup_global_compat_state' is never used. [unusedFunction]
+
+^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:29:0: style: The function '_avs_net_cleanup_global_ssl_state' is never used. [unusedFunction]
+
+^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:710:0: style: The function '_avs_net_create_dtls_socket' is never used. [unusedFunction]
+
+^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:774:0: style: The function '_avs_net_create_ssl_socket' is never used. [unusedFunction]
+
+^
+examples/custom-network/bind/src/net_impl.c:326:0: style: The function '_avs_net_create_tcp_socket' is never used. [unusedFunction]
+
+^
+examples/custom-network/bind/src/net_impl.c:319:0: style: The function '_avs_net_create_udp_socket' is never used. [unusedFunction]
+
+^
+examples/custom-network/bind/src/net_impl.c:26:0: style: The function '_avs_net_initialize_global_compat_state' is never used. [unusedFunction]
+
+^
+examples/custom-tls/certificates-advanced-fake-dane/src/tls_impl.c:20:0: style: The function '_avs_net_initialize_global_ssl_state' is never used. [unusedFunction]
+
+^
+src/modules/ipso/anjay_ipso_button.c:242:0: style: The function 'anjay_ipso_button_install' is never used. [unusedFunction]
+
+^
+src/modules/ipso/anjay_ipso_button.c:276:0: style: The function 'anjay_ipso_button_instance_add' is never used. [unusedFunction]
+
+^
+src/modules/ipso/anjay_ipso_button.c:328:0: style: The function 'anjay_ipso_button_instance_remove' is never used. [unusedFunction]
+
+^
+src/modules/ipso/anjay_ipso_button.c:359:0: style: The function 'anjay_ipso_button_update' is never used. [unusedFunction]
+
+^
+demo/demo_utils.c:54:0: style: The function 'argv_append' is never used. [unusedFunction]
+
+^
+demo/demo_utils.c:31:0: style: The function 'argv_get' is never used. [unusedFunction]
+
+^
+demo/demo_utils.c:36:0: style: The function 'argv_store' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/avs_coap_code_utils.c:115:0: style: The function 'avs_coap_code_is_request' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/avs_coap_code_utils.c:24:0: style: The function 'avs_coap_code_to_string' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/udp/avs_coap_udp_tx_params.c:68:0: style: The function 'avs_coap_udp_max_transmit_wait' is never used. [unusedFunction]
+
+^
+deps/avs_coap/src/udp/avs_coap_udp_tx_params.c:31:0: style: The function 'avs_coap_udp_tx_params_valid' is never used. [unusedFunction]
+
+^
+examples/custom-network/ip-stickiness/src/net_impl.c:409:0: style: The function 'avs_net_resolved_endpoint_get_host_port' is never used. [unusedFunction]
+
+^
+deps/avs_coap/tests/mock_clock.c:54:0: style: The function 'clock_gettime' is never used. [unusedFunction]
+
+^
+deps/avs_coap/tests/utils.c:51:0: style: The function 'current_token' is never used. [unusedFunction]
+
+^
+demo/demo_utils.c:89:0: style: The function 'demo_parse_long' is never used. [unusedFunction]
+
+^
+deps/avs_coap/tests/options/options.c:163:0: style: The function 'deref_free' is never used. [unusedFunction]
+
+^
+tests/core/io/dynamic.c:282:0: style: The function 'dynamic_test_delete' is never used. [unusedFunction]
+
+^
+tests/core/io/dynamic.c:256:0: style: The function 'dynamic_test_env' is never used. [unusedFunction]
+
+^
+demo/demo_utils.c:110:0: style: The function 'fetch_bytes' is never used. [unusedFunction]
+
+^
+deps/avs_coap/tests/udp/msg_cache.c:69:0: style: The function 'free_msg_array' is never used. [unusedFunction]
+
+^
+deps/avs_coap/tests/udp/msg.c:29:0: style: The function 'free_ptr' is never used. [unusedFunction]
+
+^
+demo/demo_utils.c:84:0: style: The function 'geo_distance_m' is never used. [unusedFunction]
+
+^
+demo/demo_utils.c:144:0: style: The function 'open_temporary_file' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
